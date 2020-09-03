@@ -12,6 +12,8 @@ namespace GPS_Sim
 {
     public partial class Form1 : Form
     {
+        Replay replay;
+
         public Form1()
         {
             InitializeComponent();
@@ -23,6 +25,8 @@ namespace GPS_Sim
             mainTab.SizeMode = TabSizeMode.Fixed;
 
             fileToConvertPathBox.Text = Properties.Settings.Default.FilePathOfGeneratedFile;
+
+            replay = new Replay(this);
         }
 
         private void generateButton_Click(object sender, EventArgs e)
@@ -51,12 +55,14 @@ namespace GPS_Sim
 
         private void HelpButton_Click(object sender, EventArgs e)
         {
-            panelLeft.Height = HelpButton.Height;
-            panelLeft.Top = HelpButton.Top;
+            panelLeft.Height = HelpMeButton.Height;
+            panelLeft.Top = HelpMeButton.Top;
 
             mainTab.SelectTab(3);
         }
 
+
+        // GENERATE PAGE CONTENT
         private void browseButton_Click(object sender, EventArgs e)
         {
             openFileDialog1.ShowDialog();
@@ -72,6 +78,18 @@ namespace GPS_Sim
             
         }
 
+        // REPLAY PAGE CONTENT
+        private void btnConnect_Click(object sender, EventArgs e)
+        {
+            replay.ConnectButtonClick();
+        }
 
+        private void btnSend_Click(object sender, EventArgs e)
+        {
+            btnSend.Enabled = false;
+            btnStop.Enabled = true;
+
+           // sendData(FileOutputTextBox.Text, "1"); not implemented yet
+        }
     }
 }

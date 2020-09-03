@@ -7,17 +7,19 @@ using System.IO.Ports;
 
 namespace GPS_Sim
 {
-    public class Replay : Form1
+    public class Replay
     {
-        SerialPort _serialPort;
+        private SerialPort _serialPort;
+        private Form1 form;
 
-        public void Start()
+        public Replay(Form1 form) //The constructor. must have same name as class. no return type
         {
             SerialPort _serialPort = new SerialPort();
+            this.form = form;
 
-            backgroundWorker1.WorkerSupportsCancellation = true;
+            this.form.backgroundWorker1.WorkerSupportsCancellation = true;
             UpdatePorts();
-            cmbCOMPort.SelectedIndex = 0;
+            this.form.cmbCOMPort.SelectedIndex = 0;
         }
 
         private void UpdatePorts()
@@ -25,14 +27,14 @@ namespace GPS_Sim
             string[] ports = SerialPort.GetPortNames();
             foreach (string port in ports)
             {
-                cmbCOMPort.Items.Add(port);
+                form.cmbCOMPort.Items.Add(port);
             }
         }
 
         private void Connect(string portNum)
         {
-            _serialPort.PortName = cmbCOMPort.SelectedItem.ToString();
-            _serialPort.BaudRate = int.Parse(cmbBaud.SelectedItem.ToString());
+            _serialPort.PortName = form.cmbCOMPort.SelectedItem.ToString();
+            _serialPort.BaudRate = int.Parse(form.cmbBaud.SelectedItem.ToString());
 
             if (_serialPort.IsOpen)
             {
@@ -44,11 +46,11 @@ namespace GPS_Sim
                 try
                 {
                     _serialPort.Open();
-                    btnSend.Enabled = true;
-                    btnStop.Enabled = true;
-                    btnConnect.Text = "Disconnect";
-                    lblConnected.Visible = true;
-                    lblConnected.Text = "Successfully connected to " + portNum;
+                    form.btnSend.Enabled = true;
+                    form.btnStop.Enabled = true;
+                    form.btnConnect.Text = "Disconnect";
+                    form.lblConnected.Visible = true;
+                    form.lblConnected.Text = "Successfully connected to " + portNum;
                 }
                 catch (UnauthorizedAccessException)
                 {
@@ -58,8 +60,8 @@ namespace GPS_Sim
                 {
                     if (!(_serialPort.IsOpen))
                     {
-                        lblConnected.Visible = true;
-                        lblConnected.Text = "Error: " + portNum + " in use by another application";
+                        form.lblConnected.Visible = true;
+                        form.lblConnected.Text = "Error: " + portNum + " in use by another application";
                     }
 
                 }
@@ -72,31 +74,29 @@ namespace GPS_Sim
 
             if (_serialPort.IsOpen)
             {
-                lblConnected.Text = $"Failed to disconnect from COM Port {cmbCOMPort.SelectedItem.ToString()}";
+                form.lblConnected.Text = $"Failed to disconnect from COM Port {form.cmbCOMPort.SelectedItem.ToString()}";
             }
             else
             {
-                btnConnect.Text = "Connect";
-                lblConnected.Text = $"Disconnected from COM Port {cmbCOMPort.SelectedItem.ToString()}";
+                form.btnConnect.Text = "Connect";
+                form.lblConnected.Text = $"Disconnected from COM Port {form.cmbCOMPort.SelectedItem.ToString()}";
             }
             
         }
 
-        private void ConnectButtonClick()
+        public void ConnectButtonClick()
         {
-            string portNum = cmbCOMPort.SelectedItem.ToString();
+            string portNum = form.cmbCOMPort.SelectedItem.ToString();
 
-            if (btnConnect.Text == "Connect")
+            if (form.btnConnect.Text == "Connect")
             {
                 Connect(portNum);
             }
-            else if (btnConnect.Text == "Disconnect")
+            else if (form.btnConnect.Text == "Disconnect")
             {
                 Disconnect(portNum);
             }
         }
-        //I'm stuck here cos i need this to execute when a button is clicked. the event handler is on form1
-        //to call this from there, this needs to be static method, then i cant access the buttons
-        //i could try implement new one of this, but i dont think thats the right thing to do. sleep time
+
     }
 }
