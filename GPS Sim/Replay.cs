@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO.Ports;
+using System.Threading;
 
 namespace GPS_Sim
 {
     public class Replay
     {
-        private SerialPort _serialPort;
+        private SerialPort _serialPort = new SerialPort();
         private Form1 form;
 
         public Replay(Form1 form) //The constructor. must have same name as class. no return type
         {
-            SerialPort _serialPort = new SerialPort();
             this.form = form;
 
             this.form.backgroundWorker1.WorkerSupportsCancellation = true;
@@ -96,6 +96,103 @@ namespace GPS_Sim
             {
                 Disconnect(portNum);
             }
+        }
+
+        private CancellationTokenSource _canceller;
+
+        public async void sendData(string outputPath, string speed)
+        {
+            var dataToSend = outputPath;
+
+            _canceller = new CancellationTokenSource();
+
+            int rate;
+            switch (speed)
+            {
+                case "1":
+                    rate = 100;
+                    break;
+
+                case "10":
+                    rate = 10;
+                    break;
+                default:
+                    rate = 100;
+                    break;
+            }
+
+
+            List<string> list = new List<string>();
+            await Task.Run(() =>
+            {
+                do
+                {
+                    using (System.IO.StreamReader reader = new System.IO.StreamReader(outputPath))
+                    {
+
+                        DateTime curr = DateTime.Now;
+
+                        string line;
+                        while (((line = reader.ReadLine()) != null) && (!(_canceller.Token.IsCancellationRequested)))
+                        {
+                            list.Add(line);
+
+                            //write line to text box
+                            if (line.StartsWith("$GNGGA"))
+                            {
+                                _serialPort.Write(line + "\r\n");
+                                SetText(DateTime.Now.ToString("HH:mm:ss.fff") + " " + line + "\n");
+                            }
+                            else if (line.StartsWith("$GNRMC"))
+                            {
+                                _serialPort.Write(line + "\r\n");
+                                SetText(DateTime.Now.ToString("HH:mm:ss.fff") + " " + line + "\n");
+
+                                var period = (DateTime.Now - curr).Milliseconds;
+                                if (period < rate)
+                                {
+                                    Thread.Sleep(rate - period);
+                                }
+                                curr = DateTime.Now;
+                            }
+
+                            if (_canceller.Token.IsCancellationRequested)
+                            {
+                                break;
+                            }
+                        }
+                    }
+                }
+                while (form.txtSpeed.Text.Equals("0") && (!(_canceller.Token.IsCancellationRequested)));
+
+            });
+            _canceller.Dispose();
+            form.btnStop.Enabled = false;
+            form.btnSend.Enabled = true;
+        }
+
+        delegate void SetTextCallback(string text);
+
+        private void SetText(string text)
+        {
+            // InvokeRequired required compares the thread ID of the
+            // calling thread to the thread ID of the creating thread.
+            // If these threads are different, it returns true.
+            if (form.rtxtDataArea.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(SetText);
+                form.rtxtDataArea.Invoke(d, new object[] { text });
+            }
+            else
+            {
+                form.rtxtDataArea.AppendText(text);
+            }
+        }
+
+        public void stopClick()
+        {
+            _canceller.Cancel();
+            form.btnSend.Enabled = true;
         }
 
     }

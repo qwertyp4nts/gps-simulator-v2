@@ -34,5 +34,125 @@ namespace GPS_Sim.Properties {
                 this["FilePathOfGeneratedFile"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string RecentlyReplayedFile0 {
+            get {
+                return ((string)(this["RecentlyReplayedFile0"]));
+            }
+            set {
+                this["RecentlyReplayedFile0"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string RecentlyReplayedFile1 {
+            get {
+                return ((string)(this["RecentlyReplayedFile1"]));
+            }
+            set {
+                this["RecentlyReplayedFile1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string RecentlyReplayedFile2 {
+            get {
+                return ((string)(this["RecentlyReplayedFile2"]));
+            }
+            set {
+                this["RecentlyReplayedFile2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string RecentlyReplayedFile3 {
+            get {
+                return ((string)(this["RecentlyReplayedFile3"]));
+            }
+            set {
+                this["RecentlyReplayedFile3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string RecentlyReplayedFile4 {
+            get {
+                return ((string)(this["RecentlyReplayedFile4"]));
+            }
+            set {
+                this["RecentlyReplayedFile4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string RecentlyReplayedFile5 {
+            get {
+                return ((string)(this["RecentlyReplayedFile5"]));
+            }
+            set {
+                this["RecentlyReplayedFile5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string RecentlyReplayedFile6 {
+            get {
+                return ((string)(this["RecentlyReplayedFile6"]));
+            }
+            set {
+                this["RecentlyReplayedFile6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string RecentlyReplayedFile7 {
+            get {
+                return ((string)(this["RecentlyReplayedFile7"]));
+            }
+            set {
+                this["RecentlyReplayedFile7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string RecentlyReplayedFile8 {
+            get {
+                return ((string)(this["RecentlyReplayedFile8"]));
+            }
+            set {
+                this["RecentlyReplayedFile8"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string RecentlyReplayedFile9 {
+            get {
+                return ((string)(this["RecentlyReplayedFile9"]));
+            }
+            set {
+                this["RecentlyReplayedFile9"] = value;
+            }
+        }
     }
 }

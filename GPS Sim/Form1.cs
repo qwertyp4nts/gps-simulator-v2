@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace GPS_Sim
 {
     public partial class Form1 : Form
     {
         Replay replay;
+        SettingsProperty[] recentFiles = new SettingsProperty[10];
 
         public Form1()
         {
@@ -27,7 +29,9 @@ namespace GPS_Sim
             fileToConvertPathBox.Text = Properties.Settings.Default.FilePathOfGeneratedFile;
 
             replay = new Replay(this);
+            BuildRecentFiles();
         }
+
 
         private void generateButton_Click(object sender, EventArgs e)
         {
@@ -89,7 +93,81 @@ namespace GPS_Sim
             btnSend.Enabled = false;
             btnStop.Enabled = true;
 
-           // sendData(FileOutputTextBox.Text, "1"); not implemented yet
+            replay.sendData(fileToReplayBox.Text, "1");
+
+            //Store current path in recently replayed files
+            //get current path name
+            String currentPath = fileToReplayBox.Text;
+
+            foreach (SettingsProperty setting in recentFiles)
+            {
+                if (setting.DefaultValue.Equals(""))
+                {
+                    setting.DefaultValue = currentPath;
+                    fileToReplayBox.Items.Add(currentPath);
+                    break;
+                }
+                else
+                {
+
+                }
+            }
+         //   Properties.Settings.Default.RecentlyReplayedFile0
+            //add to settings list, if not already there. if there, move to top
+            //RecentlyReplayedFile0
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void openFileDialog2_FileOk(object sender, CancelEventArgs e)
+        {
+            fileToReplayBox.Text = openFileDialog2.FileName;
+        }
+
+        private void BuildRecentFiles()
+        {
+            int i = 0;
+            foreach (SettingsProperty setting in Properties.Settings.Default.Properties)
+            {
+                rtxtDataArea.AppendText(setting.Name + Environment.NewLine);
+                if (setting.Name.StartsWith("RecentlyReplayedFile"))
+                {
+                    recentFiles[i] = setting;
+                    i++;
+                }
+            }
+
+            for (int j = 0; j < recentFiles.Length; j++)
+            {
+                if (!recentFiles[j].DefaultValue.Equals(""))
+                {
+                    fileToReplayBox.Items[j] = recentFiles[j].Name;
+                }
+            }
+            //sort recentFiles array?
+        }
+
+        private void replayBrowseButton_Click(object sender, EventArgs e)
+        {
+            openFileDialog2.ShowDialog();
+        }
+
+        private void rtxtDataArea_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            rtxtDataArea.Clear();
+        }
+
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            replay.stopClick();
         }
     }
 }
