@@ -253,6 +253,16 @@ namespace GPS_Sim
             }*/
             //Populate dropdown box
             populateRecentFilesDropdown();
+
+            //set main dropbox text to most recently sent file - this is yuck
+            for (int j = recentFiles.Length - 1; j >= 0; j--)
+            {
+                if (!string.IsNullOrEmpty(recentFiles[j].DefaultValue.ToString()))
+                {
+                    fileToReplayBox.Text = recentFiles[j].DefaultValue.ToString();
+                    break;
+                }
+            }
         }
 
         private void replayBrowseButton_Click(object sender, EventArgs e)

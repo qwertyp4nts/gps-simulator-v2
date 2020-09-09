@@ -79,6 +79,7 @@ namespace GPS_Sim
             {
                 form.btnConnect.Text = "Connect";
                 form.lblConnected.Text = $"Disconnected from COM Port {form.cmbCOMPort.SelectedItem.ToString()}";
+                form.btnSend.Enabled = false;
             }
             
         }
@@ -98,7 +99,7 @@ namespace GPS_Sim
         }
 
         private CancellationTokenSource _canceller;
-
+        //TODO - replayTextDropdown gets cleared when data starts sending! not sure why
         public async void sendData(string outputPath, string speed)
         {
             var dataToSend = outputPath;
