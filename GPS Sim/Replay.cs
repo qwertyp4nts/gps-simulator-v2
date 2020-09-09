@@ -63,7 +63,6 @@ namespace GPS_Sim
                         form.lblConnected.Visible = true;
                         form.lblConnected.Text = "Error: " + portNum + " in use by another application";
                     }
-
                 }
             }
         }

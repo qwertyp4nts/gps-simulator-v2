@@ -259,8 +259,8 @@
             // 
             // fileToReplayBox
             // 
-            this.fileToReplayBox.FormattingEnabled = true;
             resources.ApplyResources(this.fileToReplayBox, "fileToReplayBox");
+            this.fileToReplayBox.FormattingEnabled = true;
             this.fileToReplayBox.Name = "fileToReplayBox";
             // 
             // selectFileLbl
@@ -291,8 +291,8 @@
             this.groupBox2.Controls.Add(this.lblSpeed);
             this.groupBox2.Controls.Add(this.lblRepeats);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(237)))), ((int)(((byte)(216)))));
             resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(237)))), ((int)(((byte)(216)))));
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
             // 
@@ -336,8 +336,8 @@
             // 
             // btnConnect
             // 
-            this.btnConnect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(70)))), ((int)(((byte)(109)))));
             resources.ApplyResources(this.btnConnect, "btnConnect");
+            this.btnConnect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(70)))), ((int)(((byte)(109)))));
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.UseVisualStyleBackColor = true;
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
@@ -348,8 +348,8 @@
             this.groupBox1.Controls.Add(this.cmbCOMPort);
             this.groupBox1.Controls.Add(this.lblBaud);
             this.groupBox1.Controls.Add(this.lblCOMPort);
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(237)))), ((int)(((byte)(216)))));
             resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(237)))), ((int)(((byte)(216)))));
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
@@ -386,8 +386,8 @@
             // 
             // btnClear
             // 
-            this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(70)))), ((int)(((byte)(109)))));
             resources.ApplyResources(this.btnClear, "btnClear");
+            this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(70)))), ((int)(((byte)(109)))));
             this.btnClear.Name = "btnClear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);

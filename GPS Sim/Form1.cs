@@ -99,22 +99,97 @@ namespace GPS_Sim
             //get current path name
             String currentPath = fileToReplayBox.Text;
 
-            foreach (SettingsProperty setting in recentFiles)
-            {
-                if (setting.DefaultValue.Equals(""))
-                {
-                    setting.DefaultValue = currentPath;
-                    fileToReplayBox.Items.Add(currentPath);
-                    break;
-                }
-                else
-                {
+            addRecentFile(currentPath);
+        }
 
+        private bool addRecentFile(String path)
+        {
+            //Check if path already in settings
+            foreach (SettingsProperty s in recentFiles)
+            {
+                if (s.DefaultValue.Equals(path))
+                {
+                    //clear it
+                    s.DefaultValue = "";
+                    //move it to the top
+                    sortRecentFiles(path);
+                    return true;
                 }
             }
-         //   Properties.Settings.Default.RecentlyReplayedFile0
-            //add to settings list, if not already there. if there, move to top
-            //RecentlyReplayedFile0
+
+            //Check if settings are full
+            for (int i = 0; i < recentFiles.Length; i++)
+            {
+                //if (recentFiles[i].DefaultValue.Equals(""))
+                 if (string.IsNullOrEmpty(recentFiles[i].DefaultValue.ToString()))
+                    {
+                    recentFiles[i].DefaultValue = path;
+                    //Properties.Settings.Default.Properties.recentFiles[i].DefaultValue = path;
+                    break;
+                }
+            }
+
+            //Settings are full, sort
+            sortRecentFiles(path, true);
+            return true;
+        }
+
+        private void sortRecentFiles(String path, bool full = false)
+        {
+            if (full == true)
+            {
+                for (int i = 0; i < recentFiles.Length - 1; i++)
+                {
+                    //delete first entry of recentfiles and re-order rest
+                    recentFiles[i].DefaultValue = recentFiles[i + 1].DefaultValue;
+                }
+                //add the new one at the end
+                recentFiles[recentFiles.Length - 1].DefaultValue = path;
+            }
+
+            if (full == false)
+            {
+                for (int i = 0; i < recentFiles.Length; i++)
+                {
+                    //if (recentFiles[i].DefaultValue.Equals(""))
+                    if (string.IsNullOrEmpty(recentFiles[i].DefaultValue.ToString()))
+                    {
+                        for (int j = i; j < recentFiles.Length; j++)
+                        {
+                            //re-order rest
+                            //if (recentFiles[j].DefaultValue.Equals(""))
+                            if (string.IsNullOrEmpty(recentFiles[j].DefaultValue.ToString()))
+                                {
+                                break;
+                            }
+                            recentFiles[j].DefaultValue = recentFiles[i + 1].DefaultValue;
+                        }
+                        //add the new one at the end
+                        recentFiles[recentFiles.Length - 1].DefaultValue = path;
+                    }
+                }
+            }
+            populateRecentFilesDropdown();
+
+        }
+
+        private void populateRecentFilesDropdown()
+        {
+            //remove all items from combobox
+            int itemsInComboBox = fileToReplayBox.Items.Count;
+            for (int i = 0; i < itemsInComboBox; i++)
+            {
+                fileToReplayBox.Items.RemoveAt(0);
+            }
+
+            for (int i = recentFiles.Length - 1; i >= 0; i--)
+            {
+                //if (!recentFiles[i].DefaultValue.Equals(""))
+                if (!string.IsNullOrEmpty(recentFiles[i].DefaultValue.ToString()))
+                {
+                    fileToReplayBox.Items.Add(recentFiles[i].DefaultValue);
+                }
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -130,24 +205,31 @@ namespace GPS_Sim
         private void BuildRecentFiles()
         {
             int i = 0;
-            foreach (SettingsProperty setting in Properties.Settings.Default.Properties)
+            foreach (SettingsProperty array in recentFiles)
             {
-                rtxtDataArea.AppendText(setting.Name + Environment.NewLine);
-                if (setting.Name.StartsWith("RecentlyReplayedFile"))
+                foreach (SettingsProperty setting in Properties.Settings.Default.Properties)
                 {
-                    recentFiles[i] = setting;
-                    i++;
+                    //rtxtDataArea.AppendText(setting.Name + Environment.NewLine);
+                    if (setting.Name.StartsWith("RecentlyReplayedFile" + i))
+                    {
+                        recentFiles[i] = setting;
+                        i++;
+                        break;
+                    }
                 }
             }
-
+            /*
+            //Sort settings array
             for (int j = 0; j < recentFiles.Length; j++)
             {
-                if (!recentFiles[j].DefaultValue.Equals(""))
+                if (!string.IsNullOrEmpty(recentFiles[j].DefaultValue.ToString()))
                 {
+                    //fileToReplayBox.Items[j] = recentFiles[j].Name;
                     fileToReplayBox.Items[j] = recentFiles[j].Name;
                 }
-            }
-            //sort recentFiles array?
+            }*/
+            //Populate dropdown box
+            populateRecentFilesDropdown();
         }
 
         private void replayBrowseButton_Click(object sender, EventArgs e)

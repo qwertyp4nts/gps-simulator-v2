@@ -6,34 +6,34 @@
       <Value Profile="(Default)">C:\</Value>
     </Setting>
     <Setting Name="RecentlyReplayedFile0" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">C:\Test\Dir</Value>
     </Setting>
     <Setting Name="RecentlyReplayedFile1" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">C:\Test1\Dir</Value>
     </Setting>
     <Setting Name="RecentlyReplayedFile2" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">C:\Test2\Dir</Value>
     </Setting>
     <Setting Name="RecentlyReplayedFile3" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">C:\Test3\Dir</Value>
     </Setting>
     <Setting Name="RecentlyReplayedFile4" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">C:\Test4\Dir</Value>
     </Setting>
     <Setting Name="RecentlyReplayedFile5" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">C:\Test5\Dir</Value>
     </Setting>
     <Setting Name="RecentlyReplayedFile6" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">C:\Test6\Dir</Value>
     </Setting>
     <Setting Name="RecentlyReplayedFile7" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">C:\Test7\Dir</Value>
     </Setting>
     <Setting Name="RecentlyReplayedFile8" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">C:\Test8\Dir</Value>
     </Setting>
     <Setting Name="RecentlyReplayedFile9" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">C:\Test9\Dir</Value>
     </Setting>
   </Settings>
 </SettingsFile>

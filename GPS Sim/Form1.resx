@@ -648,11 +648,14 @@
   <data name="&gt;&gt;replayBrowseButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="fileToReplayBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 9.75pt</value>
+  </data>
   <data name="fileToReplayBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>73, 87</value>
   </data>
   <data name="fileToReplayBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>472, 27</value>
+    <value>472, 23</value>
   </data>
   <data name="fileToReplayBox.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -672,6 +675,9 @@
   <data name="selectFileLbl.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="selectFileLbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 11.25pt</value>
+  </data>
   <data name="selectFileLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -679,7 +685,7 @@
     <value>12, 46</value>
   </data>
   <data name="selectFileLbl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 19</value>
+    <value>131, 18</value>
   </data>
   <data name="selectFileLbl.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -707,6 +713,9 @@
   </data>
   <data name="btnStop.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="btnStop.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 11.25pt</value>
   </data>
   <data name="btnStop.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -738,6 +747,9 @@
   <data name="btnSend.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="btnSend.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 11.25pt</value>
+  </data>
   <data name="btnSend.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -765,36 +777,6 @@
   <data name="&gt;&gt;btnSend.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="cmbSpeed.Items" xml:space="preserve">
-    <value>1x</value>
-  </data>
-  <data name="cmbSpeed.Items1" xml:space="preserve">
-    <value>1.25x</value>
-  </data>
-  <data name="cmbSpeed.Items2" xml:space="preserve">
-    <value>1.5x</value>
-  </data>
-  <data name="cmbSpeed.Items3" xml:space="preserve">
-    <value>2x</value>
-  </data>
-  <data name="cmbSpeed.Items4" xml:space="preserve">
-    <value>5x</value>
-  </data>
-  <data name="cmbSpeed.Items5" xml:space="preserve">
-    <value>10x</value>
-  </data>
-  <data name="cmbSpeed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>104, 53</value>
-  </data>
-  <data name="cmbSpeed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 27</value>
-  </data>
-  <data name="cmbSpeed.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="cmbSpeed.Text" xml:space="preserve">
-    <value>1x</value>
-  </data>
   <data name="&gt;&gt;cmbSpeed.Name" xml:space="preserve">
     <value>cmbSpeed</value>
   </data>
@@ -805,21 +787,6 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;cmbSpeed.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="txtSpeed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 20</value>
-  </data>
-  <data name="txtSpeed.MaxLength" type="System.Int32, mscorlib">
-    <value>32</value>
-  </data>
-  <data name="txtSpeed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 27</value>
-  </data>
-  <data name="txtSpeed.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="txtSpeed.Text" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="&gt;&gt;txtSpeed.Name" xml:space="preserve">
@@ -834,24 +801,6 @@
   <data name="&gt;&gt;txtSpeed.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="lblSpeed.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblSpeed.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblSpeed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 56</value>
-  </data>
-  <data name="lblSpeed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 19</value>
-  </data>
-  <data name="lblSpeed.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="lblSpeed.Text" xml:space="preserve">
-    <value>Speed:</value>
-  </data>
   <data name="&gt;&gt;lblSpeed.Name" xml:space="preserve">
     <value>lblSpeed</value>
   </data>
@@ -863,24 +812,6 @@
   </data>
   <data name="&gt;&gt;lblSpeed.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="lblRepeats.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblRepeats.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblRepeats.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 26</value>
-  </data>
-  <data name="lblRepeats.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 19</value>
-  </data>
-  <data name="lblRepeats.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="lblRepeats.Text" xml:space="preserve">
-    <value>Repeats: (0 = Loop)</value>
   </data>
   <data name="&gt;&gt;lblRepeats.Name" xml:space="preserve">
     <value>lblRepeats</value>
@@ -894,21 +825,6 @@
   <data name="&gt;&gt;lblRepeats.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 27</value>
-  </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 19</value>
-  </data>
-  <data name="label7.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
   <data name="&gt;&gt;label7.Name" xml:space="preserve">
     <value>label7</value>
   </data>
@@ -920,6 +836,9 @@
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="groupBox2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 11.25pt</value>
   </data>
   <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 350</value>
@@ -948,6 +867,9 @@
   <data name="lblConnected.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="lblConnected.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 11.25pt</value>
+  </data>
   <data name="lblConnected.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -955,7 +877,7 @@
     <value>26, 318</value>
   </data>
   <data name="lblConnected.Size" type="System.Drawing.Size, System.Drawing">
-    <value>236, 19</value>
+    <value>207, 18</value>
   </data>
   <data name="lblConnected.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -980,6 +902,9 @@
   </data>
   <data name="&gt;&gt;lblConnected.ZOrder" xml:space="preserve">
     <value>6</value>
+  </data>
+  <data name="btnConnect.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 11.25pt</value>
   </data>
   <data name="btnConnect.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1056,6 +981,9 @@
   <data name="&gt;&gt;lblCOMPort.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="groupBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 11.25pt</value>
+  </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 180</value>
   </data>
@@ -1079,6 +1007,9 @@
   </data>
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
     <value>8</value>
+  </data>
+  <data name="btnClear.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 11.25pt</value>
   </data>
   <data name="btnClear.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1106,6 +1037,9 @@
   </data>
   <data name="&gt;&gt;btnClear.ZOrder" xml:space="preserve">
     <value>9</value>
+  </data>
+  <data name="rtxtDataArea.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 11.25pt</value>
   </data>
   <data name="rtxtDataArea.Location" type="System.Drawing.Point, System.Drawing">
     <value>268, 190</value>
@@ -1299,6 +1233,9 @@
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 11.25pt</value>
+  </data>
   <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1306,7 +1243,7 @@
     <value>21, 175</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 19</value>
+    <value>109, 18</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -1351,7 +1288,7 @@
     <value>1</value>
   </data>
   <data name="generateFileButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bahnschrift, 18pt</value>
+    <value>Calibri, 15.75pt</value>
   </data>
   <data name="generateFileButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1431,6 +1368,9 @@
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 11.25pt</value>
+  </data>
   <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1438,7 +1378,7 @@
     <value>21, 53</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 19</value>
+    <value>157, 18</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1497,6 +1437,162 @@
   <data name="&gt;&gt;generateHeading.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="cmbSpeed.Items" xml:space="preserve">
+    <value>1x</value>
+  </data>
+  <data name="cmbSpeed.Items1" xml:space="preserve">
+    <value>1.25x</value>
+  </data>
+  <data name="cmbSpeed.Items2" xml:space="preserve">
+    <value>1.5x</value>
+  </data>
+  <data name="cmbSpeed.Items3" xml:space="preserve">
+    <value>2x</value>
+  </data>
+  <data name="cmbSpeed.Items4" xml:space="preserve">
+    <value>5x</value>
+  </data>
+  <data name="cmbSpeed.Items5" xml:space="preserve">
+    <value>10x</value>
+  </data>
+  <data name="cmbSpeed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 53</value>
+  </data>
+  <data name="cmbSpeed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 26</value>
+  </data>
+  <data name="cmbSpeed.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="cmbSpeed.Text" xml:space="preserve">
+    <value>1x</value>
+  </data>
+  <data name="&gt;&gt;cmbSpeed.Name" xml:space="preserve">
+    <value>cmbSpeed</value>
+  </data>
+  <data name="&gt;&gt;cmbSpeed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbSpeed.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;cmbSpeed.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtSpeed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 20</value>
+  </data>
+  <data name="txtSpeed.MaxLength" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="txtSpeed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 26</value>
+  </data>
+  <data name="txtSpeed.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="txtSpeed.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtSpeed.Name" xml:space="preserve">
+    <value>txtSpeed</value>
+  </data>
+  <data name="&gt;&gt;txtSpeed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtSpeed.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;txtSpeed.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblSpeed.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblSpeed.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblSpeed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 56</value>
+  </data>
+  <data name="lblSpeed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 18</value>
+  </data>
+  <data name="lblSpeed.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblSpeed.Text" xml:space="preserve">
+    <value>Speed:</value>
+  </data>
+  <data name="&gt;&gt;lblSpeed.Name" xml:space="preserve">
+    <value>lblSpeed</value>
+  </data>
+  <data name="&gt;&gt;lblSpeed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblSpeed.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;lblSpeed.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblRepeats.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblRepeats.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblRepeats.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 26</value>
+  </data>
+  <data name="lblRepeats.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 18</value>
+  </data>
+  <data name="lblRepeats.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblRepeats.Text" xml:space="preserve">
+    <value>Repeats: (0 = Loop)</value>
+  </data>
+  <data name="&gt;&gt;lblRepeats.Name" xml:space="preserve">
+    <value>lblRepeats</value>
+  </data>
+  <data name="&gt;&gt;lblRepeats.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblRepeats.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;lblRepeats.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 27</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 18</value>
+  </data>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="cmbBaud.Items" xml:space="preserve">
     <value>1200</value>
   </data>
@@ -1525,7 +1621,7 @@
     <value>104, 50</value>
   </data>
   <data name="cmbBaud.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 27</value>
+    <value>121, 26</value>
   </data>
   <data name="cmbBaud.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1549,7 +1645,7 @@
     <value>104, 23</value>
   </data>
   <data name="cmbCOMPort.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 27</value>
+    <value>121, 26</value>
   </data>
   <data name="cmbCOMPort.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1576,7 +1672,7 @@
     <value>6, 55</value>
   </data>
   <data name="lblBaud.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 19</value>
+    <value>74, 18</value>
   </data>
   <data name="lblBaud.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1606,7 +1702,7 @@
     <value>6, 26</value>
   </data>
   <data name="lblCOMPort.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 19</value>
+    <value>71, 18</value>
   </data>
   <data name="lblCOMPort.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
