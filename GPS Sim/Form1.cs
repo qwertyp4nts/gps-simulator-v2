@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
+using System.IO;
 
 namespace GPS_Sim
 {
@@ -90,16 +91,27 @@ namespace GPS_Sim
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            btnSend.Enabled = false;
-            btnStop.Enabled = true;
+            //check if file exists
+            if (File.Exists(@fileToReplayBox.Text))
+            {
+                btnSend.Enabled = false;
+                btnStop.Enabled = true;
 
-            replay.sendData(fileToReplayBox.Text, "1");
+                replay.sendData(fileToReplayBox.Text, "1");
 
-            //Store current path in recently replayed files
-            //get current path name
-            String currentPath = fileToReplayBox.Text;
+                //Store current path in recently replayed files
+                //get current path name
+                String currentPath = fileToReplayBox.Text;
 
-            addRecentFile(currentPath);
+                addRecentFile(currentPath);
+            }
+
+            else
+            {
+                rtxtDataArea.Clear();
+                rtxtDataArea.SelectionFont = new Font(rtxtDataArea.Font, FontStyle.Bold);
+                rtxtDataArea.AppendText($"File or directory {fileToReplayBox.Text} does not exist");
+            }
         }
 
         private bool addRecentFile(String path)
@@ -120,11 +132,10 @@ namespace GPS_Sim
             //Check if settings are full
             for (int i = 0; i < recentFiles.Length; i++)
             {
-                //if (recentFiles[i].DefaultValue.Equals(""))
                  if (string.IsNullOrEmpty(recentFiles[i].DefaultValue.ToString()))
                     {
                     recentFiles[i].DefaultValue = path;
-                    //Properties.Settings.Default.Properties.recentFiles[i].DefaultValue = path;
+                    setSettingsProperty(i, path); //SET APP KEY
                     break;
                 }
             }
@@ -132,6 +143,17 @@ namespace GPS_Sim
             //Settings are full, sort
             sortRecentFiles(path, true);
             return true;
+        }
+
+        private void setSettingsProperty(int i, String path)
+        {
+            foreach (SettingsProperty setting in Properties.Settings.Default.Properties)
+            {
+                if (setting.Name.StartsWith("RecentlyReplayedFile" + i))
+                {
+                    setting.DefaultValue = path;
+                }
+            }
         }
 
         private void sortRecentFiles(String path, bool full = false)
@@ -142,30 +164,32 @@ namespace GPS_Sim
                 {
                     //delete first entry of recentfiles and re-order rest
                     recentFiles[i].DefaultValue = recentFiles[i + 1].DefaultValue;
+                    setSettingsProperty(i, recentFiles[i + 1].DefaultValue.ToString()); //SET APP KEY
                 }
                 //add the new one at the end
                 recentFiles[recentFiles.Length - 1].DefaultValue = path;
+                setSettingsProperty(recentFiles.Length - 1, path); //SET APP KEY
             }
 
             if (full == false)
             {
                 for (int i = 0; i < recentFiles.Length; i++)
                 {
-                    //if (recentFiles[i].DefaultValue.Equals(""))
                     if (string.IsNullOrEmpty(recentFiles[i].DefaultValue.ToString()))
                     {
                         for (int j = i; j < recentFiles.Length; j++)
                         {
                             //re-order rest
-                            //if (recentFiles[j].DefaultValue.Equals(""))
                             if (string.IsNullOrEmpty(recentFiles[j].DefaultValue.ToString()))
-                                {
+                            {
                                 break;
                             }
                             recentFiles[j].DefaultValue = recentFiles[i + 1].DefaultValue;
+                            setSettingsProperty(j, recentFiles[i + 1].DefaultValue.ToString()); //SET APP KEY
                         }
                         //add the new one at the end
                         recentFiles[recentFiles.Length - 1].DefaultValue = path;
+                        setSettingsProperty(recentFiles.Length - 1, path); //SET APP KEY
                     }
                 }
             }
@@ -184,7 +208,6 @@ namespace GPS_Sim
 
             for (int i = recentFiles.Length - 1; i >= 0; i--)
             {
-                //if (!recentFiles[i].DefaultValue.Equals(""))
                 if (!string.IsNullOrEmpty(recentFiles[i].DefaultValue.ToString()))
                 {
                     fileToReplayBox.Items.Add(recentFiles[i].DefaultValue);
@@ -219,7 +242,7 @@ namespace GPS_Sim
                 }
             }
             /*
-            //Sort settings array
+            //Sort settings array - WYD here??
             for (int j = 0; j < recentFiles.Length; j++)
             {
                 if (!string.IsNullOrEmpty(recentFiles[j].DefaultValue.ToString()))
