@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.HelpMeButton = new System.Windows.Forms.Button();
             this.i2ApiButton = new System.Windows.Forms.Button();
             this.replayButton = new System.Windows.Forms.Button();
             this.generateButton = new System.Windows.Forms.Button();
@@ -72,8 +71,6 @@
             this.replayHeading = new System.Windows.Forms.Label();
             this.i2ApiTab = new System.Windows.Forms.TabPage();
             this.moteci2ApiHeading = new System.Windows.Forms.Label();
-            this.helpTab = new System.Windows.Forms.TabPage();
-            this.helpHeading = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
@@ -88,28 +85,17 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.i2ApiTab.SuspendLayout();
-            this.helpTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.HelpMeButton);
-            this.panel1.Controls.Add(this.i2ApiButton);
             this.panel1.Controls.Add(this.replayButton);
             this.panel1.Controls.Add(this.generateButton);
             this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.i2ApiButton);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // HelpMeButton
-            // 
-            resources.ApplyResources(this.HelpMeButton, "HelpMeButton");
-            this.HelpMeButton.FlatAppearance.BorderSize = 0;
-            this.HelpMeButton.Image = global::GPS_Sim.Properties.Resources._007_cars_15percent_2;
-            this.HelpMeButton.Name = "HelpMeButton";
-            this.HelpMeButton.UseVisualStyleBackColor = true;
-            this.HelpMeButton.Click += new System.EventHandler(this.HelpButton_Click);
             // 
             // i2ApiButton
             // 
@@ -166,10 +152,9 @@
             // 
             // mainTab
             // 
-            this.mainTab.Controls.Add(this.generateTab);
             this.mainTab.Controls.Add(this.replayTabHeader);
+            this.mainTab.Controls.Add(this.generateTab);
             this.mainTab.Controls.Add(this.i2ApiTab);
-            this.mainTab.Controls.Add(this.helpTab);
             resources.ApplyResources(this.mainTab, "mainTab");
             this.mainTab.Name = "mainTab";
             this.mainTab.SelectedIndex = 0;
@@ -419,19 +404,6 @@
             this.moteci2ApiHeading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(205)))), ((int)(((byte)(207)))));
             this.moteci2ApiHeading.Name = "moteci2ApiHeading";
             // 
-            // helpTab
-            // 
-            this.helpTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(70)))), ((int)(((byte)(109)))));
-            this.helpTab.Controls.Add(this.helpHeading);
-            resources.ApplyResources(this.helpTab, "helpTab");
-            this.helpTab.Name = "helpTab";
-            // 
-            // helpHeading
-            // 
-            resources.ApplyResources(this.helpHeading, "helpHeading");
-            this.helpHeading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(205)))), ((int)(((byte)(207)))));
-            this.helpHeading.Name = "helpHeading";
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -467,8 +439,6 @@
             this.groupBox1.PerformLayout();
             this.i2ApiTab.ResumeLayout(false);
             this.i2ApiTab.PerformLayout();
-            this.helpTab.ResumeLayout(false);
-            this.helpTab.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -476,7 +446,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button HelpMeButton;
         private System.Windows.Forms.Button i2ApiButton;
         private System.Windows.Forms.Button replayButton;
         private System.Windows.Forms.Button generateButton;
@@ -488,11 +457,9 @@
         private System.Windows.Forms.TabPage generateTab;
         private System.Windows.Forms.TabPage replayTabHeader;
         private System.Windows.Forms.TabPage i2ApiTab;
-        private System.Windows.Forms.TabPage helpTab;
         private System.Windows.Forms.Label generateHeading;
         private System.Windows.Forms.Label replayHeading;
         private System.Windows.Forms.Label moteci2ApiHeading;
-        private System.Windows.Forms.Label helpHeading;
         private System.Windows.Forms.Button browseButton;
         private System.Windows.Forms.MaskedTextBox fileToConvertPathBox;
         private System.Windows.Forms.Label label3;

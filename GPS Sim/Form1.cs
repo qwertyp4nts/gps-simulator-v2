@@ -20,8 +20,8 @@ namespace GPS_Sim
         public Form1()
         {
             InitializeComponent();
-            panelLeft.Height = generateButton.Height;
-            panelLeft.Top = generateButton.Top;
+            panelLeft.Height = replayButton.Height;
+            panelLeft.Top = replayButton.Top;
 
             mainTab.Appearance = TabAppearance.FlatButtons;
             mainTab.ItemSize = new Size(0, 1);
@@ -39,7 +39,7 @@ namespace GPS_Sim
             panelLeft.Height = generateButton.Height;
             panelLeft.Top = generateButton.Top;
 
-            mainTab.SelectTab(0);
+            mainTab.SelectTab(1);
         }
 
         private void replayButton_Click(object sender, EventArgs e)
@@ -47,7 +47,7 @@ namespace GPS_Sim
             panelLeft.Height = replayButton.Height;
             panelLeft.Top = replayButton.Top;
 
-            mainTab.SelectTab(1);
+            mainTab.SelectTab(0);
         }
 
         private void i2ApiButton_Click(object sender, EventArgs e)
@@ -56,14 +56,6 @@ namespace GPS_Sim
             panelLeft.Top = i2ApiButton.Top;
 
             mainTab.SelectTab(2);
-        }
-
-        private void HelpButton_Click(object sender, EventArgs e)
-        {
-            panelLeft.Height = HelpMeButton.Height;
-            panelLeft.Top = HelpMeButton.Top;
-
-            mainTab.SelectTab(3);
         }
 
 
@@ -235,7 +227,6 @@ namespace GPS_Sim
             {
                 foreach (SettingsProperty setting in Properties.Settings.Default.Properties)
                 {
-                    //rtxtDataArea.AppendText(setting.Name + Environment.NewLine);
                     if (setting.Name.StartsWith("RecentlyReplayedFile" + i))
                     {
                         recentFiles[i] = setting;
@@ -244,16 +235,6 @@ namespace GPS_Sim
                     }
                 }
             }
-            /*
-            //Sort settings array - WYD here??
-            for (int j = 0; j < recentFiles.Length; j++)
-            {
-                if (!string.IsNullOrEmpty(recentFiles[j].DefaultValue.ToString()))
-                {
-                    //fileToReplayBox.Items[j] = recentFiles[j].Name;
-                    fileToReplayBox.Items[j] = recentFiles[j].Name;
-                }
-            }*/
             //Populate dropdown box
             populateRecentFilesDropdown();
 
