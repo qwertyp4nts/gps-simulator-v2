@@ -148,6 +148,7 @@ namespace GPS_Sim
                 if (setting.Name.StartsWith("RecentlyReplayedFile" + i))
                 {
                     setting.DefaultValue = path;
+                    Properties.Settings.Default.Save();
                 }
             }
         }

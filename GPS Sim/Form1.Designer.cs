@@ -439,7 +439,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.mainTab);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(237)))), ((int)(((byte)(216)))));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
