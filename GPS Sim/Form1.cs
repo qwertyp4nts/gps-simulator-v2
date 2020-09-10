@@ -104,6 +104,9 @@ namespace GPS_Sim
                 String currentPath = fileToReplayBox.Text;
 
                 addRecentFile(currentPath);
+
+                //its getting cleared somehow
+                fileToReplayBox.Text = currentPath;
             }
 
             else
