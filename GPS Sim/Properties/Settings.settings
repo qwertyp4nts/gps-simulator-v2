@@ -2,8 +2,8 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="GPS_Sim.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="FilePathOfGeneratedFile" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\</Value>
+    <Setting Name="DirOfGeneratedFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\mila\Documents</Value>
     </Setting>
     <Setting Name="RecentlyReplayedFile0" Type="System.String" Scope="User">
       <Value Profile="(Default)">C:\Test\Dir</Value>
@@ -34,6 +34,9 @@
     </Setting>
     <Setting Name="RecentlyReplayedFile9" Type="System.String" Scope="User">
       <Value Profile="(Default)">C:\Test9\Dir</Value>
+    </Setting>
+    <Setting Name="PathOfFileToGenerate" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\mila\Desktop\Baskerville_lap.csv</Value>
     </Setting>
   </Settings>
 </SettingsFile>

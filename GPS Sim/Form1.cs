@@ -27,7 +27,8 @@ namespace GPS_Sim
             mainTab.ItemSize = new Size(0, 1);
             mainTab.SizeMode = TabSizeMode.Fixed;
 
-            fileToConvertPathBox.Text = Properties.Settings.Default.FilePathOfGeneratedFile;
+            fileToConvertPathBox.Text = Properties.Settings.Default.PathOfFileToGenerate;
+            fileToConvertOutputDir.Text = Properties.Settings.Default.DirOfGeneratedFile;
 
             replay = new Replay(this);
             BuildRecentFiles();
@@ -72,7 +73,7 @@ namespace GPS_Sim
 
         private void generateFileButton_Click(object sender, EventArgs e)
         {
-            
+            Generate generate = new Generate(this);
         }
 
         // REPLAY PAGE CONTENT
@@ -268,5 +269,7 @@ namespace GPS_Sim
         {
             replay.stopClick();
         }
+
+        
     }
 }

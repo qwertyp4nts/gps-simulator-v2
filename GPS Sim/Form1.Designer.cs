@@ -77,6 +77,8 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.folderBrowserDialog2 = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
+            this.label5 = new System.Windows.Forms.Label();
+            this.fileToConvertOutputDir = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.mainTab.SuspendLayout();
@@ -164,6 +166,8 @@
             // 
             this.generateTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(70)))), ((int)(((byte)(109)))));
             resources.ApplyResources(this.generateTab, "generateTab");
+            this.generateTab.Controls.Add(this.fileToConvertOutputDir);
+            this.generateTab.Controls.Add(this.label5);
             this.generateTab.Controls.Add(this.label4);
             this.generateTab.Controls.Add(this.consoleTextBox);
             this.generateTab.Controls.Add(this.generateFileButton);
@@ -182,6 +186,7 @@
             // 
             this.consoleTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(70)))), ((int)(((byte)(109)))));
             resources.ApplyResources(this.consoleTextBox, "consoleTextBox");
+            this.consoleTextBox.ForeColor = System.Drawing.SystemColors.Window;
             this.consoleTextBox.Name = "consoleTextBox";
             // 
             // generateFileButton
@@ -194,8 +199,8 @@
             // 
             // browseButton
             // 
-            this.browseButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(70)))), ((int)(((byte)(109)))));
             resources.ApplyResources(this.browseButton, "browseButton");
+            this.browseButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(70)))), ((int)(((byte)(109)))));
             this.browseButton.Name = "browseButton";
             this.browseButton.UseVisualStyleBackColor = true;
             this.browseButton.Click += new System.EventHandler(this.browseButton_Click);
@@ -236,8 +241,8 @@
             // 
             // replayBrowseButton
             // 
-            this.replayBrowseButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(70)))), ((int)(((byte)(109)))));
             resources.ApplyResources(this.replayBrowseButton, "replayBrowseButton");
+            this.replayBrowseButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(70)))), ((int)(((byte)(109)))));
             this.replayBrowseButton.Name = "replayBrowseButton";
             this.replayBrowseButton.UseVisualStyleBackColor = true;
             this.replayBrowseButton.Click += new System.EventHandler(this.replayBrowseButton_Click);
@@ -381,6 +386,7 @@
             // 
             this.rtxtDataArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(70)))), ((int)(((byte)(109)))));
             resources.ApplyResources(this.rtxtDataArea, "rtxtDataArea");
+            this.rtxtDataArea.ForeColor = System.Drawing.SystemColors.Window;
             this.rtxtDataArea.Name = "rtxtDataArea";
             this.rtxtDataArea.ReadOnly = true;
             this.rtxtDataArea.TextChanged += new System.EventHandler(this.rtxtDataArea_TextChanged);
@@ -413,6 +419,16 @@
             // 
             this.openFileDialog2.FileName = "openFileDialog2";
             this.openFileDialog2.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog2_FileOk);
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // fileToConvertOutputDir
+            // 
+            resources.ApplyResources(this.fileToConvertOutputDir, "fileToConvertOutputDir");
+            this.fileToConvertOutputDir.Name = "fileToConvertOutputDir";
             // 
             // Form1
             // 
@@ -461,12 +477,9 @@
         private System.Windows.Forms.Label replayHeading;
         private System.Windows.Forms.Label moteci2ApiHeading;
         private System.Windows.Forms.Button browseButton;
-        private System.Windows.Forms.MaskedTextBox fileToConvertPathBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RichTextBox consoleTextBox;
-        private System.Windows.Forms.Button generateFileButton;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox cmbSpeed;
         private System.Windows.Forms.Label lblSpeed;
@@ -478,7 +491,6 @@
         private System.Windows.Forms.Button btnClear;
         private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private System.Windows.Forms.ComboBox fileToReplayBox;
         private System.Windows.Forms.Label selectFileLbl;
         protected internal System.Windows.Forms.ComboBox cmbCOMPort;
         protected internal System.ComponentModel.BackgroundWorker backgroundWorker1;
@@ -492,6 +504,12 @@
         private System.Windows.Forms.Button replayBrowseButton;
         protected internal System.Windows.Forms.TextBox txtSpeed;
         protected internal System.Windows.Forms.RichTextBox rtxtDataArea;
+        private System.Windows.Forms.Label label5;
+        protected internal System.Windows.Forms.MaskedTextBox fileToConvertPathBox;
+        protected internal System.Windows.Forms.MaskedTextBox fileToConvertOutputDir;
+        protected internal System.Windows.Forms.RichTextBox consoleTextBox;
+        protected internal System.Windows.Forms.Button generateFileButton;
+        protected internal System.Windows.Forms.ComboBox fileToReplayBox;
     }
 }
 

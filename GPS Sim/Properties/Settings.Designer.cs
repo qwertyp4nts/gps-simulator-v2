@@ -25,13 +25,13 @@ namespace GPS_Sim.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\")]
-        public string FilePathOfGeneratedFile {
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\mila\\Documents")]
+        public string DirOfGeneratedFile {
             get {
-                return ((string)(this["FilePathOfGeneratedFile"]));
+                return ((string)(this["DirOfGeneratedFile"]));
             }
             set {
-                this["FilePathOfGeneratedFile"] = value;
+                this["DirOfGeneratedFile"] = value;
             }
         }
         
@@ -152,6 +152,18 @@ namespace GPS_Sim.Properties {
             }
             set {
                 this["RecentlyReplayedFile9"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\mila\\Desktop\\Baskerville_lap.csv")]
+        public string PathOfFileToGenerate {
+            get {
+                return ((string)(this["PathOfFileToGenerate"]));
+            }
+            set {
+                this["PathOfFileToGenerate"] = value;
             }
         }
     }
