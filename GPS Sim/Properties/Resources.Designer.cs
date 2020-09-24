@@ -63,9 +63,39 @@ namespace GPS_Sim.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _004_intersection_80px_70percentOpacity {
+            get {
+                object obj = ResourceManager.GetObject("004-intersection_80px_70percentOpacity", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _007_cars_15percent_2 {
             get {
                 object obj = ResourceManager.GetObject("007-cars_15percent_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _015_geolocation_80px_70percentOpacity {
+            get {
+                object obj = ResourceManager.GetObject("015-geolocation_80px_70percentOpacity", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _021_destination_80px_70percentOpacity {
+            get {
+                object obj = ResourceManager.GetObject("021-destination_80px_70percentOpacity", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

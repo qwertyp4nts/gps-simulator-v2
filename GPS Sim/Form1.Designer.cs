@@ -31,22 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.i2ApiButton = new System.Windows.Forms.Button();
             this.replayButton = new System.Windows.Forms.Button();
             this.generateButton = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.i2ApiButton = new System.Windows.Forms.Button();
             this.panelLeft = new System.Windows.Forms.Panel();
             this.mainTab = new System.Windows.Forms.TabControl();
-            this.generateTab = new System.Windows.Forms.TabPage();
-            this.label4 = new System.Windows.Forms.Label();
-            this.consoleTextBox = new System.Windows.Forms.RichTextBox();
-            this.generateFileButton = new System.Windows.Forms.Button();
-            this.browseButton = new System.Windows.Forms.Button();
-            this.fileToConvertPathBox = new System.Windows.Forms.MaskedTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.generateHeading = new System.Windows.Forms.Label();
             this.replayTabHeader = new System.Windows.Forms.TabPage();
             this.replayBrowseButton = new System.Windows.Forms.Button();
             this.fileToReplayBox = new System.Windows.Forms.ComboBox();
@@ -69,6 +61,16 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.rtxtDataArea = new System.Windows.Forms.RichTextBox();
             this.replayHeading = new System.Windows.Forms.Label();
+            this.generateTab = new System.Windows.Forms.TabPage();
+            this.fileToConvertOutputDir = new System.Windows.Forms.MaskedTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.consoleTextBox = new System.Windows.Forms.RichTextBox();
+            this.generateFileButton = new System.Windows.Forms.Button();
+            this.browseButton = new System.Windows.Forms.Button();
+            this.fileToConvertPathBox = new System.Windows.Forms.MaskedTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.generateHeading = new System.Windows.Forms.Label();
             this.i2ApiTab = new System.Windows.Forms.TabPage();
             this.moteci2ApiHeading = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -77,15 +79,13 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.folderBrowserDialog2 = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
-            this.label5 = new System.Windows.Forms.Label();
-            this.fileToConvertOutputDir = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.mainTab.SuspendLayout();
-            this.generateTab.SuspendLayout();
             this.replayTabHeader.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.generateTab.SuspendLayout();
             this.i2ApiTab.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,20 +99,11 @@
             this.panel1.Name = "panel1";
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // i2ApiButton
-            // 
-            resources.ApplyResources(this.i2ApiButton, "i2ApiButton");
-            this.i2ApiButton.FlatAppearance.BorderSize = 0;
-            this.i2ApiButton.Image = global::GPS_Sim.Properties.Resources._007_cars_15percent_2;
-            this.i2ApiButton.Name = "i2ApiButton";
-            this.i2ApiButton.UseVisualStyleBackColor = true;
-            this.i2ApiButton.Click += new System.EventHandler(this.i2ApiButton_Click);
-            // 
             // replayButton
             // 
             resources.ApplyResources(this.replayButton, "replayButton");
             this.replayButton.FlatAppearance.BorderSize = 0;
-            this.replayButton.Image = global::GPS_Sim.Properties.Resources._007_cars_15percent_2;
+            this.replayButton.Image = global::GPS_Sim.Properties.Resources._004_intersection_80px_70percentOpacity;
             this.replayButton.Name = "replayButton";
             this.replayButton.UseVisualStyleBackColor = true;
             this.replayButton.Click += new System.EventHandler(this.replayButton_Click);
@@ -121,7 +112,7 @@
             // 
             resources.ApplyResources(this.generateButton, "generateButton");
             this.generateButton.FlatAppearance.BorderSize = 0;
-            this.generateButton.Image = global::GPS_Sim.Properties.Resources._007_cars_15percent_2;
+            this.generateButton.Image = global::GPS_Sim.Properties.Resources._015_geolocation_80px_70percentOpacity;
             this.generateButton.Name = "generateButton";
             this.generateButton.UseVisualStyleBackColor = true;
             this.generateButton.Click += new System.EventHandler(this.generateButton_Click);
@@ -146,6 +137,15 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(205)))), ((int)(((byte)(207)))));
             this.label1.Name = "label1";
             // 
+            // i2ApiButton
+            // 
+            resources.ApplyResources(this.i2ApiButton, "i2ApiButton");
+            this.i2ApiButton.FlatAppearance.BorderSize = 0;
+            this.i2ApiButton.Image = global::GPS_Sim.Properties.Resources._021_destination_80px_70percentOpacity;
+            this.i2ApiButton.Name = "i2ApiButton";
+            this.i2ApiButton.UseVisualStyleBackColor = true;
+            this.i2ApiButton.Click += new System.EventHandler(this.i2ApiButton_Click);
+            // 
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(205)))), ((int)(((byte)(207)))));
@@ -161,65 +161,6 @@
             this.mainTab.Name = "mainTab";
             this.mainTab.SelectedIndex = 0;
             this.mainTab.TabStop = false;
-            // 
-            // generateTab
-            // 
-            this.generateTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(70)))), ((int)(((byte)(109)))));
-            resources.ApplyResources(this.generateTab, "generateTab");
-            this.generateTab.Controls.Add(this.fileToConvertOutputDir);
-            this.generateTab.Controls.Add(this.label5);
-            this.generateTab.Controls.Add(this.label4);
-            this.generateTab.Controls.Add(this.consoleTextBox);
-            this.generateTab.Controls.Add(this.generateFileButton);
-            this.generateTab.Controls.Add(this.browseButton);
-            this.generateTab.Controls.Add(this.fileToConvertPathBox);
-            this.generateTab.Controls.Add(this.label3);
-            this.generateTab.Controls.Add(this.generateHeading);
-            this.generateTab.Name = "generateTab";
-            // 
-            // label4
-            // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
-            // 
-            // consoleTextBox
-            // 
-            this.consoleTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(70)))), ((int)(((byte)(109)))));
-            resources.ApplyResources(this.consoleTextBox, "consoleTextBox");
-            this.consoleTextBox.ForeColor = System.Drawing.SystemColors.Window;
-            this.consoleTextBox.Name = "consoleTextBox";
-            // 
-            // generateFileButton
-            // 
-            resources.ApplyResources(this.generateFileButton, "generateFileButton");
-            this.generateFileButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(70)))), ((int)(((byte)(109)))));
-            this.generateFileButton.Name = "generateFileButton";
-            this.generateFileButton.UseVisualStyleBackColor = true;
-            this.generateFileButton.Click += new System.EventHandler(this.generateFileButton_Click);
-            // 
-            // browseButton
-            // 
-            resources.ApplyResources(this.browseButton, "browseButton");
-            this.browseButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(70)))), ((int)(((byte)(109)))));
-            this.browseButton.Name = "browseButton";
-            this.browseButton.UseVisualStyleBackColor = true;
-            this.browseButton.Click += new System.EventHandler(this.browseButton_Click);
-            // 
-            // fileToConvertPathBox
-            // 
-            resources.ApplyResources(this.fileToConvertPathBox, "fileToConvertPathBox");
-            this.fileToConvertPathBox.Name = "fileToConvertPathBox";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            // 
-            // generateHeading
-            // 
-            resources.ApplyResources(this.generateHeading, "generateHeading");
-            this.generateHeading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(205)))), ((int)(((byte)(207)))));
-            this.generateHeading.Name = "generateHeading";
             // 
             // replayTabHeader
             // 
@@ -397,6 +338,75 @@
             this.replayHeading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(205)))), ((int)(((byte)(207)))));
             this.replayHeading.Name = "replayHeading";
             // 
+            // generateTab
+            // 
+            this.generateTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(70)))), ((int)(((byte)(109)))));
+            resources.ApplyResources(this.generateTab, "generateTab");
+            this.generateTab.Controls.Add(this.fileToConvertOutputDir);
+            this.generateTab.Controls.Add(this.label5);
+            this.generateTab.Controls.Add(this.label4);
+            this.generateTab.Controls.Add(this.consoleTextBox);
+            this.generateTab.Controls.Add(this.generateFileButton);
+            this.generateTab.Controls.Add(this.browseButton);
+            this.generateTab.Controls.Add(this.fileToConvertPathBox);
+            this.generateTab.Controls.Add(this.label3);
+            this.generateTab.Controls.Add(this.generateHeading);
+            this.generateTab.Name = "generateTab";
+            // 
+            // fileToConvertOutputDir
+            // 
+            resources.ApplyResources(this.fileToConvertOutputDir, "fileToConvertOutputDir");
+            this.fileToConvertOutputDir.Name = "fileToConvertOutputDir";
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // consoleTextBox
+            // 
+            this.consoleTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(70)))), ((int)(((byte)(109)))));
+            resources.ApplyResources(this.consoleTextBox, "consoleTextBox");
+            this.consoleTextBox.ForeColor = System.Drawing.SystemColors.Window;
+            this.consoleTextBox.Name = "consoleTextBox";
+            // 
+            // generateFileButton
+            // 
+            resources.ApplyResources(this.generateFileButton, "generateFileButton");
+            this.generateFileButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(70)))), ((int)(((byte)(109)))));
+            this.generateFileButton.Name = "generateFileButton";
+            this.generateFileButton.UseVisualStyleBackColor = true;
+            this.generateFileButton.Click += new System.EventHandler(this.generateFileButton_Click);
+            // 
+            // browseButton
+            // 
+            resources.ApplyResources(this.browseButton, "browseButton");
+            this.browseButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(70)))), ((int)(((byte)(109)))));
+            this.browseButton.Name = "browseButton";
+            this.browseButton.UseVisualStyleBackColor = true;
+            this.browseButton.Click += new System.EventHandler(this.browseButton_Click);
+            // 
+            // fileToConvertPathBox
+            // 
+            resources.ApplyResources(this.fileToConvertPathBox, "fileToConvertPathBox");
+            this.fileToConvertPathBox.Name = "fileToConvertPathBox";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // generateHeading
+            // 
+            resources.ApplyResources(this.generateHeading, "generateHeading");
+            this.generateHeading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(205)))), ((int)(((byte)(207)))));
+            this.generateHeading.Name = "generateHeading";
+            // 
             // i2ApiTab
             // 
             this.i2ApiTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(70)))), ((int)(((byte)(109)))));
@@ -420,16 +430,6 @@
             this.openFileDialog2.FileName = "openFileDialog2";
             this.openFileDialog2.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog2_FileOk);
             // 
-            // label5
-            // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.Name = "label5";
-            // 
-            // fileToConvertOutputDir
-            // 
-            resources.ApplyResources(this.fileToConvertOutputDir, "fileToConvertOutputDir");
-            this.fileToConvertOutputDir.Name = "fileToConvertOutputDir";
-            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -445,14 +445,14 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.mainTab.ResumeLayout(false);
-            this.generateTab.ResumeLayout(false);
-            this.generateTab.PerformLayout();
             this.replayTabHeader.ResumeLayout(false);
             this.replayTabHeader.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.generateTab.ResumeLayout(false);
+            this.generateTab.PerformLayout();
             this.i2ApiTab.ResumeLayout(false);
             this.i2ApiTab.PerformLayout();
             this.ResumeLayout(false);

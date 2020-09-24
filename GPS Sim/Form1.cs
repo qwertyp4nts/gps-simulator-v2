@@ -149,7 +149,17 @@ namespace GPS_Sim
                 {
                     setting.DefaultValue = path;
                     Properties.Settings.Default.Save();
+                    PrintSettings(); //debug
+                    break;
                 }
+            }
+        }
+
+        private void PrintSettings()
+        {
+            foreach (SettingsProperty setting in Properties.Settings.Default.Properties)
+            {
+                rtxtDataArea.AppendText(setting.Name + ": " + setting.DefaultValue + Environment.NewLine);
             }
         }
 
