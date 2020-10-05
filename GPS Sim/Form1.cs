@@ -30,11 +30,35 @@ namespace GPS_Sim
             fileToConvertPathBox.Text = Properties.Settings.Default.PathOfFileToGenerate;
             fileToConvertOutputDir.Text = Properties.Settings.Default.DirOfGeneratedFile;
 
+            generateSettings();
+
             replay = new Replay(this);
             BuildRecentFiles();
         }
 
-
+        private void generateSettings()
+        {
+            Properties.Settings.Default.DirOfGeneratedFile = fileToConvertOutputDir.Text;
+            Properties.Settings.Default.PathOfFileToGenerate = fileToConvertPathBox.Text;
+         /*   try
+            {
+                Properties.Settings.Default.RecentlyReplayedFile0 = fileToReplayBox.Items[0].ToString();
+                Properties.Settings.Default.RecentlyReplayedFile1 = fileToReplayBox.Items[1].ToString();
+                Properties.Settings.Default.RecentlyReplayedFile2 = fileToReplayBox.Items[2].ToString();
+                Properties.Settings.Default.RecentlyReplayedFile3 = fileToReplayBox.Items[3].ToString();
+                Properties.Settings.Default.RecentlyReplayedFile4 = fileToReplayBox.Items[4].ToString();
+                Properties.Settings.Default.RecentlyReplayedFile5 = fileToReplayBox.Items[5].ToString();
+                Properties.Settings.Default.RecentlyReplayedFile6 = fileToReplayBox.Items[6].ToString();
+                Properties.Settings.Default.RecentlyReplayedFile7 = fileToReplayBox.Items[7].ToString();
+                Properties.Settings.Default.RecentlyReplayedFile8 = fileToReplayBox.Items[8].ToString();
+                Properties.Settings.Default.RecentlyReplayedFile9 = fileToReplayBox.Items[9].ToString();
+            }
+            catch (Exception e)
+            {
+                //all good
+            }*/
+             Properties.Settings.Default.Save();
+        }
         private void generateButton_Click(object sender, EventArgs e)
         {
             panelLeft.Height = generateButton.Height;
@@ -74,6 +98,7 @@ namespace GPS_Sim
         private void generateFileButton_Click(object sender, EventArgs e)
         {
             Generate generate = new Generate(this);
+            generateSettings();
         }
 
         // REPLAY PAGE CONTENT
@@ -149,6 +174,14 @@ namespace GPS_Sim
                 {
                     setting.DefaultValue = path;
                     Properties.Settings.Default.Save();
+                    var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.PerUserRoamingAndLocal);
+                    bool a = config.HasFile;
+                    var b = config.FilePath;
+                    rtxtDataArea.AppendText(b + Environment.NewLine);
+                    if (a)
+                        rtxtDataArea.AppendText("has file" + Environment.NewLine);
+                    else
+                        rtxtDataArea.AppendText("does not have file" + Environment.NewLine);
                     PrintSettings(); //debug
                     break;
                 }
@@ -281,6 +314,21 @@ namespace GPS_Sim
             replay.stopClick();
         }
 
-        
+        private void saveSettingsBtn_Click(object sender, EventArgs e)
+        {
+            var asfb = fileToReplayBox;
+
+            Properties.Settings.Default.Test = fileToReplayBox.Text;
+            Properties.Settings.Default.Save();
+            var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.PerUserRoamingAndLocal);
+            bool a = config.HasFile;
+            var b = config.FilePath;
+            rtxtDataArea.AppendText(b + Environment.NewLine);
+            if (a)
+                rtxtDataArea.AppendText("has file" + Environment.NewLine);
+            else
+                rtxtDataArea.AppendText("does not have file" + Environment.NewLine);
+            PrintSettings(); //debug
+        }
     }
 }

@@ -79,6 +79,7 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.folderBrowserDialog2 = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
+            this.saveSettingsBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.mainTab.SuspendLayout();
@@ -165,6 +166,7 @@
             // replayTabHeader
             // 
             this.replayTabHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(70)))), ((int)(((byte)(109)))));
+            this.replayTabHeader.Controls.Add(this.saveSettingsBtn);
             this.replayTabHeader.Controls.Add(this.replayBrowseButton);
             this.replayTabHeader.Controls.Add(this.fileToReplayBox);
             this.replayTabHeader.Controls.Add(this.selectFileLbl);
@@ -430,6 +432,14 @@
             this.openFileDialog2.FileName = "openFileDialog2";
             this.openFileDialog2.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog2_FileOk);
             // 
+            // saveSettingsBtn
+            // 
+            resources.ApplyResources(this.saveSettingsBtn, "saveSettingsBtn");
+            this.saveSettingsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(70)))), ((int)(((byte)(109)))));
+            this.saveSettingsBtn.Name = "saveSettingsBtn";
+            this.saveSettingsBtn.UseVisualStyleBackColor = true;
+            this.saveSettingsBtn.Click += new System.EventHandler(this.saveSettingsBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -510,6 +520,7 @@
         protected internal System.Windows.Forms.RichTextBox consoleTextBox;
         protected internal System.Windows.Forms.Button generateFileButton;
         protected internal System.Windows.Forms.ComboBox fileToReplayBox;
+        private System.Windows.Forms.Button saveSettingsBtn;
     }
 }
 
