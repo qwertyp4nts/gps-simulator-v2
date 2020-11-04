@@ -3,19 +3,19 @@
   <Profiles />
   <Settings>
     <Setting Name="DirOfGeneratedFile" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Users\mila\Documents</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="RecentlyReplayedFile0" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\path</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="RecentlyReplayedFile1" Type="System.String" Scope="User">
-      <Value Profile="(Default)">sedfr</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="RecentlyReplayedFile2" Type="System.String" Scope="User">
-      <Value Profile="(Default)">sdf</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="RecentlyReplayedFile3" Type="System.String" Scope="User">
-      <Value Profile="(Default)">sdf</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="RecentlyReplayedFile4" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
@@ -36,7 +36,7 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="PathOfFileToGenerate" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Users\mila\Desktop\Baskerville_lap.csv</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Test" Type="System.String" Scope="User">
       <Value Profile="(Default)" />

@@ -38,26 +38,27 @@ namespace GPS_Sim
 
         private void generateSettings()
         {
-            Properties.Settings.Default.DirOfGeneratedFile = fileToConvertOutputDir.Text;
-            Properties.Settings.Default.PathOfFileToGenerate = fileToConvertPathBox.Text;
-         /*   try
-            {
-                Properties.Settings.Default.RecentlyReplayedFile0 = fileToReplayBox.Items[0].ToString();
-                Properties.Settings.Default.RecentlyReplayedFile1 = fileToReplayBox.Items[1].ToString();
-                Properties.Settings.Default.RecentlyReplayedFile2 = fileToReplayBox.Items[2].ToString();
-                Properties.Settings.Default.RecentlyReplayedFile3 = fileToReplayBox.Items[3].ToString();
-                Properties.Settings.Default.RecentlyReplayedFile4 = fileToReplayBox.Items[4].ToString();
-                Properties.Settings.Default.RecentlyReplayedFile5 = fileToReplayBox.Items[5].ToString();
-                Properties.Settings.Default.RecentlyReplayedFile6 = fileToReplayBox.Items[6].ToString();
-                Properties.Settings.Default.RecentlyReplayedFile7 = fileToReplayBox.Items[7].ToString();
-                Properties.Settings.Default.RecentlyReplayedFile8 = fileToReplayBox.Items[8].ToString();
-                Properties.Settings.Default.RecentlyReplayedFile9 = fileToReplayBox.Items[9].ToString();
-            }
-            catch (Exception e)
-            {
-                //all good
-            }*/
-             Properties.Settings.Default.Save();
+            fileToConvertOutputDir.Text = Properties.Settings.Default.DirOfGeneratedFile;
+            fileToConvertPathBox.Text = Properties.Settings.Default.PathOfFileToGenerate;
+            fileToReplayBox.Text = Properties.Settings.Default.RecentlyReplayedFile0;
+             /*   try
+                {
+                    Properties.Settings.Default.RecentlyReplayedFile0 = fileToReplayBox.Items[0].ToString();
+                    Properties.Settings.Default.RecentlyReplayedFile1 = fileToReplayBox.Items[1].ToString();
+                    Properties.Settings.Default.RecentlyReplayedFile2 = fileToReplayBox.Items[2].ToString();
+                    Properties.Settings.Default.RecentlyReplayedFile3 = fileToReplayBox.Items[3].ToString();
+                    Properties.Settings.Default.RecentlyReplayedFile4 = fileToReplayBox.Items[4].ToString();
+                    Properties.Settings.Default.RecentlyReplayedFile5 = fileToReplayBox.Items[5].ToString();
+                    Properties.Settings.Default.RecentlyReplayedFile6 = fileToReplayBox.Items[6].ToString();
+                    Properties.Settings.Default.RecentlyReplayedFile7 = fileToReplayBox.Items[7].ToString();
+                    Properties.Settings.Default.RecentlyReplayedFile8 = fileToReplayBox.Items[8].ToString();
+                    Properties.Settings.Default.RecentlyReplayedFile9 = fileToReplayBox.Items[9].ToString();
+                }
+                catch (Exception e)
+                {
+                    //all good
+                }*/
+             //Properties.Settings.Default.Save();
         }
         private void generateButton_Click(object sender, EventArgs e)
         {
@@ -98,7 +99,7 @@ namespace GPS_Sim
         private void generateFileButton_Click(object sender, EventArgs e)
         {
             Generate generate = new Generate(this);
-            generateSettings();
+            //generateSettings();
         }
 
         // REPLAY PAGE CONTENT
@@ -329,6 +330,20 @@ namespace GPS_Sim
             else
                 rtxtDataArea.AppendText("does not have file" + Environment.NewLine);
             PrintSettings(); //debug
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Properties.Settings.Default.DirOfGeneratedFile = fileToConvertOutputDir.Text;
+            Properties.Settings.Default.PathOfFileToGenerate = fileToConvertPathBox.Text;
+            Properties.Settings.Default.RecentlyReplayedFile0 = fileToReplayBox.Text;
+
+            Properties.Settings.Default.Save();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

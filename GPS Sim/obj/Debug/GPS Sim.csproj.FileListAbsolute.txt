@@ -13,12 +13,10 @@ C:\Users\mila\Documents\Visual Studio 2017\Projects\GPS Sim\GPS Sim\obj\Debug\GP
 C:\Users\mila\Documents\Visual Studio 2017\Projects\GPS Sim\GPS Sim\obj\Debug\aa\GPS Sim.resources.dll
 C:\Users\mila\Documents\Visual Studio 2017\Projects\GPS Sim\GPS Sim\bin\Debug\App.config
 C:\Users\mila\Documents\Visual Studio 2017\Projects\GPS Sim\GPS Sim\bin\Debug\EntityFramework.dll
-C:\Users\mila\Documents\Visual Studio 2017\Projects\GPS Sim\GPS Sim\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\mila\Documents\Visual Studio 2017\Projects\GPS Sim\GPS Sim\bin\Debug\System.Data.SQLite.dll
 C:\Users\mila\Documents\Visual Studio 2017\Projects\GPS Sim\GPS Sim\bin\Debug\System.Data.SQLite.EF6.dll
 C:\Users\mila\Documents\Visual Studio 2017\Projects\GPS Sim\GPS Sim\bin\Debug\System.Data.SQLite.Linq.dll
 C:\Users\mila\Documents\Visual Studio 2017\Projects\GPS Sim\GPS Sim\bin\Debug\EntityFramework.xml
-C:\Users\mila\Documents\Visual Studio 2017\Projects\GPS Sim\GPS Sim\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\mila\Documents\Visual Studio 2017\Projects\GPS Sim\GPS Sim\bin\Debug\System.Data.SQLite.xml
 C:\Users\mila\Documents\Visual Studio 2017\Projects\GPS Sim\GPS Sim\bin\Debug\System.Data.SQLite.dll.config
 C:\Users\mila\Documents\Visual Studio 2017\Projects\GPS Sim\GPS Sim\obj\Debug\GPS Sim.csproj.CopyComplete

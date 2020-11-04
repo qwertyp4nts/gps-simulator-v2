@@ -40,6 +40,7 @@
             this.panelLeft = new System.Windows.Forms.Panel();
             this.mainTab = new System.Windows.Forms.TabControl();
             this.replayTabHeader = new System.Windows.Forms.TabPage();
+            this.saveSettingsBtn = new System.Windows.Forms.Button();
             this.replayBrowseButton = new System.Windows.Forms.Button();
             this.fileToReplayBox = new System.Windows.Forms.ComboBox();
             this.selectFileLbl = new System.Windows.Forms.Label();
@@ -79,7 +80,6 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.folderBrowserDialog2 = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
-            this.saveSettingsBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.mainTab.SuspendLayout();
@@ -181,6 +181,14 @@
             this.replayTabHeader.Controls.Add(this.replayHeading);
             resources.ApplyResources(this.replayTabHeader, "replayTabHeader");
             this.replayTabHeader.Name = "replayTabHeader";
+            // 
+            // saveSettingsBtn
+            // 
+            resources.ApplyResources(this.saveSettingsBtn, "saveSettingsBtn");
+            this.saveSettingsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(70)))), ((int)(((byte)(109)))));
+            this.saveSettingsBtn.Name = "saveSettingsBtn";
+            this.saveSettingsBtn.UseVisualStyleBackColor = true;
+            this.saveSettingsBtn.Click += new System.EventHandler(this.saveSettingsBtn_Click);
             // 
             // replayBrowseButton
             // 
@@ -432,14 +440,6 @@
             this.openFileDialog2.FileName = "openFileDialog2";
             this.openFileDialog2.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog2_FileOk);
             // 
-            // saveSettingsBtn
-            // 
-            resources.ApplyResources(this.saveSettingsBtn, "saveSettingsBtn");
-            this.saveSettingsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(70)))), ((int)(((byte)(109)))));
-            this.saveSettingsBtn.Name = "saveSettingsBtn";
-            this.saveSettingsBtn.UseVisualStyleBackColor = true;
-            this.saveSettingsBtn.Click += new System.EventHandler(this.saveSettingsBtn_Click);
-            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -451,6 +451,8 @@
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(237)))), ((int)(((byte)(216)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

@@ -25,7 +25,7 @@ namespace GPS_Sim.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\mila\\Documents")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string DirOfGeneratedFile {
             get {
                 return ((string)(this["DirOfGeneratedFile"]));
@@ -37,7 +37,7 @@ namespace GPS_Sim.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\path")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string RecentlyReplayedFile0 {
             get {
                 return ((string)(this["RecentlyReplayedFile0"]));
@@ -49,7 +49,7 @@ namespace GPS_Sim.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("sedfr")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string RecentlyReplayedFile1 {
             get {
                 return ((string)(this["RecentlyReplayedFile1"]));
@@ -61,7 +61,7 @@ namespace GPS_Sim.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("sdf")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string RecentlyReplayedFile2 {
             get {
                 return ((string)(this["RecentlyReplayedFile2"]));
@@ -73,7 +73,7 @@ namespace GPS_Sim.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("sdf")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string RecentlyReplayedFile3 {
             get {
                 return ((string)(this["RecentlyReplayedFile3"]));
@@ -157,7 +157,7 @@ namespace GPS_Sim.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\mila\\Desktop\\Baskerville_lap.csv")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string PathOfFileToGenerate {
             get {
                 return ((string)(this["PathOfFileToGenerate"]));
